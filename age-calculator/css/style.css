@@ -79,9 +79,75 @@ body * {
     margin: 0 0 5px;
   }
 
-  @media (max-width: 500px) {
+
+  @media screen and (max-width: 360px){
+    h1 {
+      font-size: 20px;
+    }
+
+  
+    .time{
+      font-size: 12px;
+      margin: 0;
+    }
+    .time h2 {
+      font-size: 12px;
+      margin: 5px;
+
+    }
+  
+    .time p {
+      font-size: 5px;
+      
+    }
+  }
+
+  @media screen and (min-width:361px) and (max-width:500px){
+
+  h1 {
+    font-size: 25px;
+    
+    
+  }
+
+  .time {
+    margin: 5px;
+  }
+
+  .time h2 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .time p {
+    font-size: 10px;
+    
+  }
+}
+
+input[type="date"], 
+input[type="time"] {
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    border: 2px solid green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ /*  @media screen and (max-width: 500px) {
     h1 {
       font-size: 25px;
+      
     }
   
     .time {
@@ -105,7 +171,11 @@ body * {
       width: 200px;
       height: 30px;
       border: 2px solid green;
-  }
+  } */
+
+
+ 
+
 /* .image2{
     width: 100%;
     height: 100vh;
