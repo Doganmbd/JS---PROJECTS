@@ -81,7 +81,7 @@ body * {
 
   @media (max-width: 500px) {
     h1 {
-      font-size: 45px;
+      font-size: 25px;
     }
   
     .time {
@@ -93,8 +93,9 @@ body * {
       margin: 0;
     }
   
-    .time small {
+    .time p {
       font-size: 10px;
+      
     }
   }
   
