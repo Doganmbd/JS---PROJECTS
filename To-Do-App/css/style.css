@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', sans-serif;
+}
+
+body{
+    background-image: url(../images/main1.jpg) ;
+    background-size:cover ;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+.container{
+    margin: auto;
+    width: 45rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    
+}
+
+.header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-area{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+}
+
+.search{
+    width: 91%;
+    height: 2rem;
+    padding-left: 6px;
+    padding-right: 0.5rem;
+}
+.btn{
+    width: 7%;
+    height: 2rem;
+    position: relative;
+    top: 1px;
+    right: 6px;
+    cursor: pointer;
+}
+
+h3{ 
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+.tasks-box{
+    width: 80%;
+    margin: auto;
+    background: url(../images/main.jpg);
+    background-attachment: fixed;
+    opacity: 0.9;
+    background-size:cover ;
+    height: auto;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    overflow:auto;
+}
+
+.tasks{
+    margin: auto;
+    width: 92%;
+    
+}
+
+.task-num{
+    /* width: 100%; */
+    height: 2rem;
+    padding-left: 6px;
+    padding-right: 0.5rem;
+    border: 1px solid salmon;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+}
+.task-num:nth-child(even){
+    background-color: antiquewhite;
+}
+
+.task-num:hover{
+    background-color: rgb(227, 240, 252);
+}
+
+.task{
+    display: flex;
+    align-items: center;
+}
+.fa-check{
+    padding-right: 0.5rem;
+    visibility: hidden;
+}
+.delete{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-xmark{
+    visibility: hidden;
+    
+}
+
+/* .footer{
+    width: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    bottom : 0vh;
+    text-align: center;
+    background-color: salmon;
+} */
