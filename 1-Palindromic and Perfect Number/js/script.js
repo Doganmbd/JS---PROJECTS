@@ -21,7 +21,7 @@ let perfectButton = document.querySelector(".per2") ;
 let perfectTextarea = document.querySelector(".per3") ;
 
 
-console.log(perfectTextarea);
+
 perfectButton.addEventListener("click", () => { 
     if (perfectTextarea.value) {
         perfectTextarea.value =""
