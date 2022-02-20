@@ -26,61 +26,6 @@ body {
     height: 80vh;  
     margin:auto;
 }
-
-#task{
-    width: 90%;
-    height: 1em;
-    padding-left: 2rem;
-    /* border-radius: 5px; */
-    font-size: 1.4em;
-    /* border: 5px solid #619fd3; */
-    
-} 
-
-.menu {
-/*     width: 40%;
-    height: 300px;
-    margin: auto;
-    border: 1px solid rgb(31, 29, 29);
-    border-radius: 2rem;
-    background-color: rgba(0,0,0,0.2); */
-    width: 60vw;
-    padding: 0px 10px;
-    text-align: left;
-    border: 5px solid #619fd3;
-    color: rgb(233, 17, 17);
-    background-color: #cfcccc;
-    margin:auto;
-    margin-top:2em;
-    box-shadow: 5px 10px #84b3d398;
-    border-radius: 50px;
-}
-.pp{
-    font-size: 3.5rem;
-    display: flex;
-    justify-content: center;
-    /* padding-top: 1rem; */
-    margin-bottom: 2rem;
-    font-family: 'Mountains of Christmas', cursive;
-    
-}
-
-ul li{
-    /* list-style-type: none;  */
-    font-size: 1em;
-    display: flex;
-    /* flex-direction: row; */
-    position: relative;
-    padding: 0.5em;
-    align-items: center;
-    cursor: pointer;
-    width: 50vw;
-   
-    /* overflow-wrap: break-word; */
-    /* display: inline-block; */
-}
-
-
 .input-search {
     display:flex;
     justify-content: center;
@@ -88,121 +33,178 @@ ul li{
     width:60vw ;
     box-shadow: 5px 10px #9c658398;
     border-radius: 5px;
-    /* border: 1px solid rgb(253, 0, 0); */
+    border: 1px solid rgb(253, 0, 0);
 }
 
-li.checked::before {
-    content: "\2714";
-    font-size:1.5em;
-    color:rgb(19, 204, 66);
-    margin-right: 0.4em;
+#task{
+    width: 100%;
+    height: 1em;
+    padding-left: 2rem;
+    /* border-radius: 5px; */
+    font-size: 1.4em;
+    /* border: 5px solid #619fd3; */
     
+} 
+.button {
+    width: 5rem;
+    background-color: rgb(28, 253, 84);
+    /* border-radius:15px; */
+    color: white; 
+    cursor: pointer; 
+    border: none;
+
 }
 
-li.unchecked::before {
-    content: "\2610";
-    font-size:1.5em;
-    margin-right: 0.4em;
-    color:rgb(19, 204, 66);
-    }
 
-.row{
-        margin: 2rem;
-        
-        border: 1px dotted red;
-        font-size: 1.2rem;
-        background: white;
+.menu {
+    /*     width: 40%;
+        height: 300px;
+        margin: auto;
+        border: 1px solid rgb(31, 29, 29);
+        border-radius: 2rem;
+        background-color: rgba(0,0,0,0.2); */
+        width: 60vw;
+        padding: 0px 10px;
+        text-align: left;
+        border: 5px solid #619fd3;
+        color: rgb(233, 17, 17);
+        background-color: #cfcccc;
+        margin:auto;
+        margin-top:2em;
+        box-shadow: 5px 10px #84b3d398;
+        border-radius: 50px;
+    }
+    .pp{
+        font-size: 3.5rem;
         display: flex;
         justify-content: center;
-        border-radius:55px;
+        /* padding-top: 1rem; */
+        margin-bottom: 2rem;
+        font-family: 'Mountains of Christmas', cursive;
+        
+    }
     
-/*         display:flex;
-        justify-content: space-between;
-        margin: 5px 0px;
-        width: 100%;
-     */
+    ul li{
+        /* list-style-type: none;  */
+        font-size: 1em;
+        display: flex;
+        /* flex-direction: row; */
+        position: relative;
+        padding: 0.5em;
+        align-items: center;
+        cursor: pointer;
+        width: 50vw;
+       
+        /* overflow-wrap: break-word; */
+        /* display: inline-block; */
     }
-
-.row :hover{
-        transform: scale(1.04); /* üzerine gelince hareket ediyor gibi görüntüledim */ 
+    
+    
+    
+    li.checked::before {
+        content: "\2714";
+        font-size:1.5em;
+        color:rgb(19, 204, 66);
+        margin-right: 0.4em;
+        
     }
-
-
-    .btn {
-        background-color: #ff160e; /* Blue background */
-        border: none; /* Remove borders */
-        border-radius:55px;
-        color: white; /* White text */
-        padding: 0.3em 0.4em; /* Some padding */
-        font-size: 1.2em; /* Set a font size */
-        cursor: pointer; /* Mouse pointer on hover */
-        width:3em;
-      }
-      .button {
-        width: 5rem;
-        background-color: rgb(28, 253, 84);
-        /* border-radius:15px; */
-        color: white; 
-        cursor: pointer; 
+    
+    li.unchecked::before {
+        content: "\2610";
+        font-size:1.5em;
+        margin-right: 0.4em;
+        color:rgb(19, 204, 66);
+        }
+    
+    .row{
+            margin: 2rem;
+            
+            border: 1px dotted red;
+            font-size: 1.2rem;
+            background: white;
+            display: flex;
+            justify-content: center;
+            border-radius:55px;
+        
+    /*         display:flex;
+            justify-content: space-between;
+            margin: 5px 0px;
+            width: 100%;
+         */
+        }
+    
+    .row :hover{
+            transform: scale(1.04); /* üzerine gelince hareket ediyor gibi görüntüledim */ 
+        }
+    
+    
+        .btn {
+            background-color: #ff160e; /* Blue background */
+            border: none; /* Remove borders */
+            border-radius:55px;
+            color: white; /* White text */
+            padding: 0.3em 0.4em; /* Some padding */
+            font-size: 1.2em; /* Set a font size */
+            cursor: pointer; /* Mouse pointer on hover */
+            width:3em;
+          }
+    
+      input{
+        font-size: 1em;
         border: none;
-
+        width: 100%;
+        padding: 1.5em;
+      }
+    input:focus {
+        outline: none;
+      }
+    .search {
+        width: 40%;
+        height: 1.5rem;
+        padding-left: 0.5rem;
     }
-
-  input{
-    font-size: 1em;
-    border: none;
-    width: 100%;
-    padding: 1.5em;
-  }
-input:focus {
-    outline: none;
-  }
-.search {
-    width: 40%;
-    height: 1.5rem;
-    padding-left: 0.5rem;
-}
-
-
-
-#footer{
-    display: flex;
-    flex-direction: row;
-}
-p{
-    font-size: 1.4em;
-    display: block;
-    display: inline-block; 
-    margin-top:1em;
-}
-h2{
-    text-align: center;
-    margin:1em 0em;
-}
-
-
-
-
-
-
-.head {
-    display: flex;
-    justify-content: center;
-    font-size: 3rem;
-}
-
-.checked {
     
     
-    width: 100%;
+    
+    #footer{
+        display: flex;
+        flex-direction: row;
+    }
+    p{
+        font-size: 1.4em;
+        display: block;
+        display: inline-block; 
+        margin-top:1em;
+    }
+    h2{
+        text-align: center;
+        margin:1em 0em;
+    }
     
     
-    padding-left: 1rem;
-}
-
-.unchecked {
     
-    width: 100%;
-    padding-left: 1rem;
-}
-
+    
+    
+    
+    .head {
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+    }
+    
+    .checked {
+        
+        
+        width: 100%;
+        
+        
+        padding-left: 1rem;
+    }
+    
+    .unchecked {
+        
+        width: 100%;
+        padding-left: 1rem;
+    }
+    
+    
