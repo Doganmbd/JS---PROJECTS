@@ -15,30 +15,34 @@
  
 </head>
 <body>
-    <main>
+    <main id="formm" >
         <header>Guess The Number</header>
-        <form class="accept">
-            <p id="p1">(Enter a number between 1-100)</p>
-        </form>
-        <div class="inpt1">
-            
-            <input class="inpt" type="number" placeholder="please enter a number" >
-            <button class="btn">Accept</button>
-
-
-           
+        <div class="accept">
+            <p id="p1">( Enter a number between <span id="down"> 1 </span>  -  <span id="up">100</span> )</p>
         </div>
-        <p id="p2">dsada</p>
+        <form class="inpt1" name="formname">
+            
+            <input id="inpt" type="number"  placeholder="enter a number" min="1" max="100" >
+            <button id="btn">Accept</button>
+        </form>
+
+        <p id="p2">Make a Guess</p>
 
         <div id="remainder" >
             <h3 class="count"> 
-                <input type="text"> hakkınız kaldı
+                You have  <input class="count-input" type="text">       attempts left
             </h3>
         </div>
         <div class="restart ">
             <button class="btn2">Restart</button>
         </div>
 
+
     </main>
+    <footer>
+        <p>Prepared by Mustafa Bilal DOĞAN</p> 
+        <p>Copyright &#169; 2022</p>
+    </footer>
+    <script src="./js/app.js"></script>
 </body>
 </html>
