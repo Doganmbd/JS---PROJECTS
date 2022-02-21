@@ -23,10 +23,13 @@ let perfectTextarea = document.querySelector(".per3") ;
 
 
 perfectButton.addEventListener("click", () => { 
-    if (perfectTextarea.value) {
+    perfectTextarea.value =""
+    
+/*     if (perfectTextarea.value) {
         perfectTextarea.value =""
+        perfectInput.value =""
         
-    }
+    } */
     for (let i = 1; i <= perfectInput.value; i++) {
         let sum = 0
         for(let j=1 ; j<=i/2 ; j++){
@@ -38,15 +41,16 @@ perfectButton.addEventListener("click", () => {
             perfectTextarea.value += i + "\n"
         }
     }
+    perfectInput.value =""
 })
 
-perfectInput.addEventListener("click", () => { 
+/* perfectInput.addEventListener("click", () => { 
     if(perfectInput.value){      // perfectInput.value doluysa yani true'dur. içini boş yap
-        perfectTextarea.value =""
         perfectInput.value =""
+        perfectTextarea.value =""
     }
 
-})
+}) */
 
 
 
