@@ -13,9 +13,9 @@ setInterval( () => {
     } , 1000) ;
     
 function operator(operate) {
-/*        if (bottomDisplay.innerHTML == "") {
+       if (bottomDisplay.innerHTML == "") {
     return;
-  }  */
+  } 
 
   if(topDisplayNum.innerText && topDisplayOprt.innerText == "") {
     topDisplayNum.innerText = bottomDisplay.innerText ;
@@ -30,10 +30,10 @@ function operator(operate) {
         return ;
     }
      
-/*      if(operate == "=") {
+     if(operate == "=") {
         operate = topDisplayOprt.innerText
     } 
- */
+
     switch (operate) {
         case "+":
             topDisplayNum.innerText = +topDisplayNum.innerText + +bottomDisplay.innerText ;
