@@ -1,39 +1,40 @@
 const clock = document.getElementById("clock") ;
+
 const topDisplayNum = document.querySelector("#top-display-num") ;
 const topDisplayOprt = document.getElementById("top-display-operator") ;
 const bottomDisplay = document.querySelector(".current-display")
+
+
 const buttonClick = document.querySelector(".calculator") ;
+console.log(buttonClick);
 
 setInterval( () => {
     const time = new Date() ;
+
     const [h,m,y,mt,d] = [time.getHours().toString().padStart(2,"0"),time.getMinutes().toString().padStart(2,"0"),time.getFullYear().toString().padStart(2,"0"),time.getMonth().toString().padStart(2,"0"),time.getDate().toString().padStart(2,"0")]
     
-
-    clock.innerText = h + ":" + m + " " + " " + y + "- " + mt + "-"+ d ;
+    clock.innerText = h + " : " + m + " &  " + " " + y + " - " + mt + " - "+ d ;
     } , 1000) ;
     
 function operator(operate) {
-       if (bottomDisplay.innerHTML == "") {
-    return;
-  } 
 
   if(topDisplayNum.innerText && topDisplayOprt.innerText == "") {
     topDisplayNum.innerText = bottomDisplay.innerText ;
     bottomDisplay.innerText = "" ;
     return ;
   }
-  
+
     if(topDisplayNum.innerText) {
-        if(topDisplayOprt == "%") {
+        if(topDisplayOprt.innerText == "%") {
         topDisplayNum.innerText = (topDisplayNum.innerText * bottomDisplay.innerText) / 100 ;
         bottomDisplay.innerText ="" ;
         return ;
     }
-     
-     if(operate == "=") {
+
+/*      if(operate == "=") {
         operate = topDisplayOprt.innerText
     } 
-
+ */
     switch (operate) {
         case "+":
             topDisplayNum.innerText = +topDisplayNum.innerText + +bottomDisplay.innerText ;
@@ -51,6 +52,7 @@ function operator(operate) {
             topDisplayNum.innerText = topDisplayNum.innerText / bottomDisplay.innerText                    
             break;
             
+ 
     }
     bottomDisplay.innerText ="" ;
     return ;
@@ -68,7 +70,7 @@ buttonClick.addEventListener("click" , (e) =>{
             case "opMult":
             case "opSub":
             case "opAdd":
-
+ 
                 if(bottomDisplay.innerText.endsWith(".")) {
                     bottomDisplay.innerText = bottomDisplay.innerText.slice(0,-1) ;
                 }
@@ -94,13 +96,12 @@ buttonClick.addEventListener("click" , (e) =>{
             if(bottomDisplay.innerText === "0") {
                 bottomDisplay.innerText = ""
             }
-                break;
 
             if(bottomDisplay.innerText.length < 10) {
                 bottomDisplay.innerText += e.target.innerHTML ;
             }
                 break;
-            
+
             case "funAc" :
                 topDisplayNum.innerText = topDisplayOprt.innerText =bottomDisplay.innerText = ""
                 break ;
@@ -120,34 +121,8 @@ buttonClick.addEventListener("click" , (e) =>{
             case "equ" :
                 operator(topDisplayOprt.innerText)
                     topDisplayOprt.innerText = ""
+                
                 break ;
         }
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

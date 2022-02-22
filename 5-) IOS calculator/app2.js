@@ -37,7 +37,7 @@ function operator(operate) {
   
 // topDisplayNum doluysa ve operatorumün içinde % varsa
     if(topDisplayNum.innerText) {
-        if(topDisplayOprt == "%") {
+        if(topDisplayOprt.innerText == "%") {
         topDisplayNum.innerText = (topDisplayNum.innerText * bottomDisplay.innerText) / 100 ;
         bottomDisplay.innerText ="" ;
         return ;
