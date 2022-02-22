@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IOS calculator</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>IOS Calculator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+        <div class="header">
+            <span id="clock"></span><span id="symbol"></span>
+            <span></span><span></span><span></span>
+        </div>
+        <div class="display">
+            <div class="previous-display">
+                <span id="top-display-num"></span><span id="top-display-operator"></span>
+            </div>
+            <div class="current-display"></div>
+        </div>
+        <div class="buttons-container">
+            <button id="funAc" class="button function ac">AC</button>
+            <button id="funDel" class="button function del">DEL</button>
+            <button id="funPercent" class="button function percent">%</button>
+            <button id="opDiv" class="button operator division">÷</button>
+            <button id="num7" class="button num number-7">7</button>
+            <button id="num8" class="button num number-8">8</button>
+            <button id="num9" class="button num number-9">9</button>
+            <button id="opMult" class="button operator multiplication">x</button>
+            <button id="num4" class="button num number-4">4</button>
+            <button id="num5" class="button num number-5">5</button>
+            <button id="num6" class="button num number-6">6</button>
+            <button id="opSub" class="button operator subtraction">-</button>
+            <button id="num1" class="button num number-1">1</button>
+            <button id="num2" class="button num number-2">2</button>
+            <button id="num3" class="button num number-3">3</button>
+            <button id="opAdd" class="button operator addition">+</button>
+            <button id="num0" class="button num number-0">0</button>
+            <button id="dot" class="button num decimal">.</button>
+            <button id="equ" class="button equal">=</button>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
