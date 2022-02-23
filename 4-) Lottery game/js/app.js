@@ -1,4 +1,160 @@
-let button = document.getElementById("button");
+let buttons = document.getElementById("button") ;
+let inputs = document.getElementById("input") ;
+let totalBall = document.querySelector(".totalball") ;
+
+/* let stage = document.querySelector(".stage") ;
+let ball = document.querySelector(".ball") ;
+let number = document.querySelector(".number") ; */
+
+let numElement = [] ;
+let luckyElement = [] ;
+let randomNum = 0 ; 
+let randomJoker = 0 ;
+let randomSuper = 0
+
+buttons.addEventListener("click", () => {
+  totalBall.innerHTML = ""
+  if(inputs.value < 9 && inputs.value > 0) {
+    for (let i = 0; i < Number(inputs.value); i++) {
+
+
+
+      for (let j = 0; j < 6; j++) {
+        let sections = document.createElement("section") ;
+        let figures = document.createElement("figure") ;
+        let spans = document.createElement("span") ;
+        
+        sections.classList.add("stage") ;
+        figures.classList.add("ball") ;
+        spans.classList.add("number") ;
+        
+
+        totalBall.appendChild(sections) ;
+        sections.appendChild(figures) ;
+        figures.appendChild(spans) ;
+        
+
+        numElement[j] = spans ;
+        randomNum = Math.floor(Math.random() * 99 ) + 1 ;
+        luckyElement.includes(randomNum) ? "" : (luckyElement[j] = randomNum) ;
+      }
+      luckyElement = luckyElement.sort(function(a,b){
+        return a-b ;
+      })
+
+      for (let k = 0; k < luckyElement.length; k++) {
+        numElement[k].innerHTML = luckyElement[k] ;
+        
+      }
+      // ball7 joker number
+      let sections1 = document.createElement("section") ;
+      let figures1 = document.createElement("figure") ;
+      let spans1 = document.createElement("span") ;
+      
+      sections1.classList.add("stage") ;
+      figures1.classList.add("ball" , "ball7") ;
+      spans1.classList.add("number") ;
+      
+
+      totalBall.appendChild(sections1) ;
+      sections1.appendChild(figures1) ;
+      figures1.appendChild(spans1) ;
+
+      randomJoker = Math.floor(Math.random() * 99 + 1);
+      while (luckyElement.includes(randomJoker)) {
+        randomJoker = Math.floor(Math.random() * 99 + 1);
+      }
+      spans1.innerHTML =randomJoker ;
+
+
+
+
+      //ball8 superstar number
+
+      let sections2 = document.createElement("section") ;
+      let figures2 = document.createElement("figure") ;
+      let spans2 = document.createElement("span") ;
+      
+      sections2.classList.add("stage") ;
+      figures2.classList.add("ball" , "ball8") ;
+      spans2.classList.add("number") ;
+      
+
+      totalBall.appendChild(sections2) ;
+      sections2.appendChild(figures2) ;
+      figures2.appendChild(spans2) ;
+
+      
+      randomSuper = Math.floor(Math.random() * 99 + 1);
+      spans2.innerHTML = randomSuper;
+    }
+
+  } else alert("Please enter a number between 1-8 (both inclusive)");
+  inputs.value = ""
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const ball = document.querySelectorAll(".number") ;
+const lotteryButton = document.getElementById("button") ;
+const lotteryInput = document.getElementById("txt-num") ;
+console.log(ball);
+
+
+lotteryButton.addEventListener("click" , (e ) => {
+    // çekiliş yapacağımız sayıları array içine alalım 
+    const lotterNum = [] ;
+    for (let i = 0; i < lotteryInput.value ; i++){
+        for (let j = 0; lotterNum.length < 6 ; j++) {
+            let number = Math.floor(Math.random() * 90) + 1;
+            if(lotterNum.indexOf(number) == -1 )
+            lotterNum.push(number) ;
+/*             else {
+                i-- ;
+            } */
+            
+/*         }
+        
+    }
+    let i = 0 ;
+    ball.forEach((btn) => {
+        btn.innerHTML = lotterNum[i] ;
+        i++ ;
+    });
+/*     e.preventDefault() ; */
+/*    ball.innerHTML += createBall(lotterNum[i])
+
+})
+
+const createBall = (a) => {
+    return    `<section class="stage">
+    <figure class="ball">
+      <span class="number" data-number="">${lotterNum[i]}</span>
+    </figure>
+</section>`
+} */
+
+ 
+
+
+
+
+
+
+
+/* let button = document.getElementById("button");
 let txt_number = document.getElementById("txt-num");
 let number_box = document.querySelector(".number-box");
 let lucky_numbers = [];
@@ -71,4 +227,4 @@ button.addEventListener("click", () => {
     }
   } else alert("Please enter a number between 1-8 (both inclusive)");
 });
- 
+  */

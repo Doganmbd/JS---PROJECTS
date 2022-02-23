@@ -3,7 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
+.totalball {
+  width: 65%;
+  
+  display: inline-block;
+}
+.content-box {
+  width: 300px;
+  height: 300px;
+  float: right;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+  
 
+}
+.box{
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  font-size: 20px;
+
+}
 body{
     /* background-image: url(../img/is.jpg); */
     background-size: cover;
@@ -18,19 +42,24 @@ body{
 }
 .ball {
   display: inline-block;
-  width: 200%;
-  height: 200%;
-  margin: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 60px;
   border-radius: 50%;
+  box-shadow: 0rem 0rem 1rem red;
+  align-items: center;
   position: relative;
   background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
   overflow: hidden;
   animation: ballGrow 2s ease-out forwards;
   transform: scale(0.5);
+  /* margin-left: 100px; */
 }
 .ball:after {
   content: "";
   position: absolute;
+  
   top: 5%;
   left: 10%;
   width: 100%;
@@ -45,10 +74,11 @@ body{
 }
 
 .stage {
-  width: 50px;
+  width: 60px;
   height: 50px;
   display: inline-block;
-  margin: 5px;
+  margin: 15px;
+  margin-left: 30px;
   -webkit-perspective: 1200px;
   -moz-perspective: 1200px;
   -ms-perspective: 1200px;
@@ -63,13 +93,15 @@ body{
 
 .number {
   position: absolute;
-  width: 80%;
+  width: 100%;
+  
   text-align: center;
   line-height: 50px;
-  font-size: 70px;
+  font-size: 40px;
   color: blue;
   font-family: 'Roboto', sans-serif;
   animation: ballRoll 10s ease-out;
+  box-shadow: 10px 10px 10px rgb(255, 0, 0) ;
 }
 
 .number:after {
@@ -81,7 +113,7 @@ body{
 }
 
 .number:before {
-  content: '?';
+  /* content: '?'; */
   position: absolute;
   transform: translateX(-25%);
   animation: numberReveal 0.1s 1.5s forwards;
