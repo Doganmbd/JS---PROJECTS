@@ -83,7 +83,7 @@ birthdayInput.addEventListener("change" , (e) => {
     }
     document.body.style.backgroundImage = "url(./image/m.jfif)" // yıl seçtiği aman arka plan rengimi değiştirdim.
 
-    setInterval(updateContainer, 1000);  // buraya yazmamızın sebebi fonk.içinde yani change eventi gerçekleştiği zaman çalışmasını istiyorum.
+    setInterval(updateContainer, 1000);   // buraya yazmamızın sebebi fonk.içinde yani change eventi gerçekleştiği zaman çalışmasını istiyorum.
 }) ;
 
 
@@ -107,6 +107,8 @@ const updateContainer = () => {
     let currentHour = now.getHours() ;
     let currentMinute= now.getMinutes() ;
     let currentSecond= now.getSeconds() ;
+
+    
 
     // seçtiğim tarih sayı olarak rakamları doğum tarihimden büyükse sıkıntı olmaz.
     let yearOfAge = currentYear - updateYear ;
