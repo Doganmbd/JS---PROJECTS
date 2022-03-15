@@ -12,6 +12,9 @@
   console.log(data[0].capital)
 }) */
 
+const input = document.getElementById("input")
+const btn = document.getElementById("search")
+
 
 const renderCountry = (data, type = 'country') => {
   // const flag = data.flags.svg;
@@ -222,5 +225,8 @@ const useData =async (countryAllName)=> {
 
 } 
 
+btn.addEventListener("click", ()=> {
+  const btnClick = input.value
+  useData(btnClick)
+})
 
-useData("australia")
