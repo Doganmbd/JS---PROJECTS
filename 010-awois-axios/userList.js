@@ -1,5 +1,10 @@
 // Api dan aldığımız kullanıcıları fotoğraflarıyla birlikte listeleyecem
 // postman de test ettim ve kafamda projemi tasarladım.
+// get - select , post-insert , put-update , delete-delete
+// get ile request oluşturup post ile API ye veri gönderme projesi
+// axios ile projemi yapıyorum . axios bir kütüphane yani bir paket.bu yüzden direk kullanamıyoruz ya cdn ile link verecez yada paketi indirecez.
+// axios fetch den daha hızlı çalışıyor.
+
 // api dan gelen verileri bir format içerisinde tbodyuserlist içine append edecem.
 
 const tbody = document.getElementById("tbodyUserList");
@@ -8,6 +13,8 @@ const loading = document.getElementById("loading");
 window.onload = () => {
   //genelde başına get veya post yazıyorum ne olduğunu anlayabilmek için.
   getApiUserList();
+  //alert("your apikey :" + DecryptStringAES(sessionStorage.getItem("apiKey")))
+  alert(`your apikey : ${DecryptStringAES(sessionStorage.getItem("apiKey") )}`)
   setInterval(() => {
     getApiUserList(); // her 5 sn de yenilesin sayfamı.
   }, 5000);
